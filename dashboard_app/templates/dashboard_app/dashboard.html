@@ -1,0 +1,33 @@
+<!-- dashboard_app/templates/dashboard_app/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Visualization Dashboard</h1>
+        <div id="filters">
+            <!-- Filters will go here -->
+        </div>
+        <div id="charts">
+            <!-- Charts will go here -->
+        </div>
+    </div>
+    <!-- Add these to the base.html -->
+<div id="filters">
+    <select id="year-filter">
+        <option value="">All Years</option>
+        <!-- Populate options dynamically if needed -->
+    </select>
+    <!-- Add other filters similarly -->
+</div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="{% static 'dashboard_app/js/main.js' %}"></script>
+</body>
+</html>
